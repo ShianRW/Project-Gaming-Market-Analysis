@@ -23,3 +23,11 @@
   - Deduplicated games by gameid (fallback title+platform).
   - Added platform and platform_raw columns.
   - Saved cleaned per-platform files and games_master.csv in data_clean/.
+
+## [v0.04] - Players & Purchases Table Cleaning
+- Script: 03_clean_players_and_purchases.py
+- Actions:
+    - Implemented full pricing analysis module across PlayStation, Steam, and Xbox datasets.
+    - Added code for loading, validating, cleaning, merging, and enriching multi-currency price data.
+    - Added handling for missing prices, inconsistent currencies, and timestamp variations.
+    - Ensured preview-data–aware design compatible with the project’s business question.
