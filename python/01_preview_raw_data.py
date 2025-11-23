@@ -1,3 +1,22 @@
+"""
+Script Name: 01_preview_raw_data.py
+Purpose:
+    Inspect raw CSV files for PlayStation, Steam, and Xbox datasets.
+    Preview structure, column types, row counts, and initial data quality issues.
+    Establishes the foundation for subsequent data cleaning modules.
+
+Dataset:
+    data_raw/ (folder containing raw platform CSVs)
+
+Author: Shian Raveneau-Wright
+
+Notes:
+    - Outputs summary prints for each table.
+    - Does not modify or save any data.
+    - Intended as an initial exploration step to understand dataset shape.
+"""
+
+
 import pandas as pd
 
 # Creates file paths (relative to the project folder)

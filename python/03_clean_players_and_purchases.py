@@ -1,3 +1,29 @@
+"""
+Script Name: 03_clean_players_and_purchases.py
+Purpose:
+    Clean and merge players.csv and purchased_games.csv across platforms.
+    Tasks include:
+        - validating player IDs
+        - normalising country fields
+        - expanding purchase lists into 1 row per purchase
+        - tagging records with platform
+        - building unified players_master and purchases_master datasets
+
+Dataset:
+    Input:   data_raw/<platform>/players.csv
+             data_raw/<platform>/purchased_games.csv
+    Output:  data_clean/players_master.csv
+             data_clean/purchases_master.csv
+
+Author: Shian Raveneau-Wright
+
+Notes:
+    - Creates clean relational tables ready for SQL foreign keys.
+    - Ensures consistent schemas across platforms.
+    - Purchase expansion supports accurate player value analysis.
+"""
+
+
 import os
 import ast
 import pandas as pd

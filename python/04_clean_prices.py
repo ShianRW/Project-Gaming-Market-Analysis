@@ -1,4 +1,27 @@
-# python/04_clean_prices.py
+"""
+Script Name: 04_clean_prices.py
+Purpose:
+    Clean and merge prices.csv across all platforms to create a unified,
+    latest-acquired price table. Tasks include:
+        - merging PlayStation, Steam, and Xbox price data
+        - removing invalid rows (missing gameid, no currency values)
+        - converting date_acquired to timestamp
+        - selecting the most recent price per game/platform
+        - normalising currency formats
+        - saving final cleaned prices dataset
+
+Dataset:
+    Input:   data_raw/<platform>/prices.csv
+    Output:  data_clean/prices_master_latest.csv
+
+Author: Shian Raveneau-Wright
+
+Notes:
+    - Provides currency data required for pricing, supply, and behaviour analysis.
+    - Designed to be beginner-friendly while maintaining analytical accuracy.
+"""
+
+
 import os
 import pandas as pd
 from datetime import datetime

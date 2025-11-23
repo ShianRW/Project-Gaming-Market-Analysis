@@ -1,3 +1,31 @@
+"""
+Script Name: 05_build_sql_database.py
+Purpose:
+    Build a SQLite relational database from cleaned CSV data.
+    Tasks include:
+        - creating tables: games, players, purchases, prices
+        - defining primary keys and foreign keys
+        - inserting cleaned data into SQLite
+        - generating games_analytics.db for SQL-based analysis
+
+Dataset:
+    Input:   data_clean/games_master.csv
+             data_clean/players_master.csv
+             data_clean/purchases_master.csv
+             data_clean/prices_master_latest.csv
+
+Output:
+    database/games_analytics.db
+
+Author: Shian Raveneau-Wright
+
+Notes:
+    - Uses sqlite3 to establish relational structure.
+    - Produces the database consumed by Modules 8+ for SQL analytics.
+    - Ensures referential integrity between players, games, and purchases.
+"""
+
+
 import sqlite3
 import pandas as pd
 from pathlib import Path

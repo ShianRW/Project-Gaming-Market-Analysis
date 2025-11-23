@@ -1,3 +1,28 @@
+"""
+Script Name: 02_clean_games.py
+Purpose:
+    Clean and standardise games.csv for each platform and merge them into a
+    unified master dataset. Tasks include:
+        - parsing list-like fields (developers, publishers, genres, languages)
+        - converting release_date to datetime
+        - extracting year, month, quarter
+        - deduplicating by gameid and platform
+        - normalising missing values
+        - saving per-platform and master cleaned files
+
+Dataset:
+    Input:   data_raw/<platform>/games.csv
+    Output:  data_clean/games_clean_<platform>.csv
+             data_clean/games_master.csv
+
+Author: Shian Raveneau-Wright
+
+Notes:
+    - Ensures consistent schema across PS, Steam, and Xbox.
+    - Provides the base table required for pricing, purchases, and SQL analysis.
+"""
+
+
 import os # file path handling.
 import ast # safely convert strings that look like Python lists into real lists.
 import pandas as pd # main data analysis library.
