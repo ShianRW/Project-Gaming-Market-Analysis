@@ -31,3 +31,13 @@
     - Added code for loading, validating, cleaning, merging, and enriching multi-currency price data.
     - Added handling for missing prices, inconsistent currencies, and timestamp variations.
     - Ensured preview-data–aware design compatible with the project’s business question.
+
+## [v0.05] - Prices Table Cleaning
+- Script: python/04_clean_prices.py
+- Actions:
+  - Converted price columns (usd, eur, gbp, jpy, rub) to numeric (coerced invalid values to NaN).
+  - Parsed date_acquired to datetime and added consistent date formatting.
+  - Dropped rows missing gameid.
+  - Saved cleaned per-platform price history files.
+  - Saved per-platform latest snapshot files.
+  - Created consolidated master tables: prices_master_history.csv and prices_master_latest.csv in data_clean/.
