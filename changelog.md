@@ -65,3 +65,12 @@
   - Created the first multi-table join for market penetration analysis.
   - Added query scaffold to 01_market_penetration.sql.
 
+## [v0.08] - Market Penetration SQL Queries Added
+- Script: sql/01_market_penetration.sql
+- Actions:
+  - Extended 01_market_penetration.sql with core analytical queries.
+  - Added country-level penetration metrics.
+  - Added platform-by-country penetration analysis.
+  - Created cross-platform penetration matrix.
+  - Added top and low penetration market queries.
+  - Added placeholder for population-normalised penetration
