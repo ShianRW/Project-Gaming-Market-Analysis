@@ -21,8 +21,10 @@ BUSINESS QUESTIONS:
 - When someone buys games, where (platform) do they buy the most?
 
 05_TOP_GAMES:
-- 
-- 
+- What are the most purchased games overall and per platform?
+- Which games drive the most engagement across regions?
+- Which titles dominate individual ecosystems vs. cross-platform?
+- How do purchasing patterns differ by country?
 
 06_PRICING_VALUE_PERCEPTION:
 - 

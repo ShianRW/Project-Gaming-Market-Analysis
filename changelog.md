@@ -111,8 +111,8 @@
     - Added unified yearly growth summary table for dashboarding.
 
 ## [v0.13] - Player Value Analysis
-- Created file: sql/03_player_value.sql
-- Added queries for:
+- Script:sql/03_player_value.sql
+- Actions:
     - Games owned per player
     - Avg games owned per platform
     - Active vs inactive buyer segmentation
@@ -121,12 +121,23 @@
     - Country-level player value insights
 
 ## [v0.14] - Purchasing Behaviour Analysis
-- Created file: sql/04_purchasing_behaviour.sql
-- Added queries for:
-    • Initial purchase conversion
-    • Avg purchases per player
-    • Purchase velocity among active buyers
-    • Purchase frequency segmentation
-    • Country-level purchase strength
-    • Platform-level purchasing summary table
-- Ensured all analysis respects platform-specific player identity constraints.
+- Script: sql/04_purchasing_behaviour.sql
+- Actions:
+    - Initial purchase conversion
+    - Avg purchases per player
+    - Purchase velocity among active buyers
+    - Purchase frequency segmentation
+    - Country-level purchase strength
+    - Platform-level purchasing summary table
+    - Ensured all analysis respects platform-specific player identity constraints.
+
+## [v0.15] - Top Games Analysis
+- Script: sql/05_top_games.sql
+- Actions:
+    - Global top purchased games
+    - Top 10 per platform (with correct windowing)
+    - Cross-platform hit titles
+    - Country-level best sellers
+    - Platform-exclusive titles
+    - Estimated revenue per game
+    - All analysis remains platform-safe (no cross-platform player identity use).
