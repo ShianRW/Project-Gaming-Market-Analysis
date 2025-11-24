@@ -76,12 +76,17 @@ ORDER BY total_players ASC;
 
 /* ===== QUERY 6: Market Penetration % (Requires population table) ===== */
 
--- This will be completed once country populations have been imported into the SQLite database.
-
--- SELECT 
---     p.country,
---     COUNT(pl.playerid) * 1.0 / pop.population AS penetration_rate
--- FROM players pl
--- JOIN population pop
---     ON pl.country = pop.country
--- GROUP BY p.country;
+SELECT 
+    pl.country,
+    pl.platform,
+    COUNT(pl.playerid) AS total_players,
+    pop.population,
+    ROUND(
+        (COUNT(pl.playerid) * 1.0 / pop.population) * 100, 
+        4
+    ) AS penetration_percentage
+FROM players AS pl
+JOIN population AS pop
+    ON pl.country = pop.country
+GROUP BY pl.country, pl.platform
+ORDER BY penetration_percentage DESC;
