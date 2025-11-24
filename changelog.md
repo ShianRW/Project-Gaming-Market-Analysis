@@ -94,3 +94,10 @@
     - Selected relevant columns: country, population.
     - Filtered to only countries represented in players tables.
     - Saved cleaned CSV to data_external/population_clean.csv for SQL integration.
+
+## [v0.11] - Population Data Integration
+- Script: python/07_load_population_into_sql.py
+- Actions:
+    - Created new population table in SQLite.
+    - Imported cleaned OWID population data into database.
+    - Updated market penetration SQL to calculate penetration % by country and platform.
