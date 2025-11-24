@@ -50,15 +50,14 @@
   - Designed SQL schemas for games, players, purchases, and prices tables.
   - Loaded cleaned CSVs into SQLite using pandas + sqlite3.
   - Committed games_analytics.db to GitHub.
+  -------------------------------------------------------------------------
+  - Created /sql directory and structured 6 category-based SQL files.
+  - Added professional SQL header template to each file.
+  - Verified SQLite database loads correctly in DB Browser.
+  - Tested basic SQL execution (SELECT COUNT(*) FROM games).
+  - Prepared environment for upcoming analytical SQL queries.
 
-## [v0.07] - SQL Framework Setup
-- Created /sql directory and structured 6 category-based SQL files.
-- Added professional SQL header template to each file.
-- Verified SQLite database loads correctly in DB Browser.
-- Tested basic SQL execution (SELECT COUNT(*) FROM games).
-- Prepared environment for upcoming analytical SQL queries.
-
-## [v0.08] - SQL Environment Validation & Market Penetration Setup
+## [v0.07] - SQL Environment Validation & Market Penetration Setup
 - Script: sql/01_market_penetration.sql
 - Actions:
   - Verified SQLite database structure and table contents.
@@ -66,7 +65,7 @@
   - Created the first multi-table join for market penetration analysis.
   - Added query scaffold to 01_market_penetration.sql.
 
-## [v0.09] - Market Penetration SQL Queries Added
+## [v0.08] - Market Penetration SQL Queries Added
 - Script: sql/01_market_penetration.sql
 - Actions:
   - Extended 01_market_penetration.sql with core analytical queries.
@@ -76,7 +75,7 @@
   - Added top and low penetration market queries.
   - Added placeholder for population-normalised penetration
 
-## [v0.10] - Population Data & Penetration Rates
+## [v0.09] - Population Data & Penetration Rates
 - Added country_population.csv to data_external.
 - Script: python/06_load_population_data.py.
 - Actions:
@@ -86,7 +85,7 @@
     - Platform-specific penetration rate query.
   - Completed the market penetration analysis framework.
 
-## [v0.11] - External Population Data Preparation
+## [v0.10] - External Population Data Preparation
 - Script: python/06_prepare_population_data.py
 - Actions:
     - Imported OWID population CSV (historical data up to 2023).
@@ -95,14 +94,14 @@
     - Filtered to only countries represented in players tables.
     - Saved cleaned CSV to data_external/population_clean.csv for SQL integration.
 
-## [v0.12] - Population Data Integration
+## [v0.11] - Population Data Integration
 - Script: python/07_load_population_into_sql.py
 - Actions:
     - Created new population table in SQLite.
     - Imported cleaned OWID population data into database.
     - Updated market penetration SQL to calculate penetration % by country and platform.
 
-## [v0.13] - Acquisition Growth Analysis
+## [v0.12] - Acquisition Growth Analysis
 - Script: sql/02_acquisition_growth.sql
 - Actions:
     - Added players_enriched view with date components.
@@ -111,7 +110,7 @@
     - Added market growth contribution query.
     - Added unified yearly growth summary table for dashboarding.
 
-## [v0.14] - Player Value Analysis
+## [v0.13] - Player Value Analysis
 - Created file: sql/03_player_value.sql
 - Added queries for:
     - Games owned per player
@@ -120,3 +119,14 @@
     - Estimated spend per player and revenue per platform
     - Value-based player segmentation
     - Country-level player value insights
+
+## [v0.14] - Purchasing Behaviour Analysis
+- Created file: sql/04_purchasing_behaviour.sql
+- Added queries for:
+    • Initial purchase conversion
+    • Avg purchases per player
+    • Purchase velocity among active buyers
+    • Purchase frequency segmentation
+    • Country-level purchase strength
+    • Platform-level purchasing summary table
+- Ensured all analysis respects platform-specific player identity constraints.
