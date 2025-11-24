@@ -101,3 +101,12 @@
     - Created new population table in SQLite.
     - Imported cleaned OWID population data into database.
     - Updated market penetration SQL to calculate penetration % by country and platform.
+
+## [v0.12] - Acquisition Growth Analysis
+- Script: sql/02_acquisition_growth.sql
+- Actions:
+    - Added players_enriched view with date components.
+    - Added global monthly/quarterly/yearly growth queries.
+    - Added platform-based growth queries.
+    - Added market growth contribution query.
+    - Added unified yearly growth summary table for dashboarding.
